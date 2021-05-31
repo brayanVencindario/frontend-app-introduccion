@@ -20,9 +20,9 @@ export const  ProjectCard = (props) => {
               <div className="text-align-left project-card-price">
                   <div style={{width:"100%", position:"relative"}}>
                   <img style={{width:"100%"}} src={imgModel} alt="imagen predicenada"/>
-                
+                  <MdFavoriteBorder size={32}className="font-icon-price" />
                 <div className="project-price-text">
-                <MdFavoriteBorder />
+         
                 <span className="fee-from">Precio final desde:</span>
                 <span className="price-from">{`${props.price} Millones*`}</span>
                 </div>
