@@ -11,7 +11,6 @@ import ImgCreation from "../Img/imagen-crear-cuenta.png";
 import {
     selectRegisterSuccess,
     selectRegisterLoading,
-    selectRegisterError,
     selectRegisterEmailCheck
     
   } from "../Reducers/Register";
@@ -21,7 +20,14 @@ import {
 
 
 export const Register = () => {
+  
+  const success = useSelector(selectRegisterSuccess);
+  const isLoading = useSelector(selectRegisterLoading);
+  //const error = useSelector(selectRegisterError);
+  const emailValue = useSelector(selectRegisterEmailCheck); 
+  const authorizationValue = useSelector(selectLoginAuthValue);
 
+  const dispatch = useDispatch();
 
     useEffect(() => {
     
@@ -29,15 +35,11 @@ export const Register = () => {
             dispatch(registerReset())
 
         }
-    }, [])
+    }, [dispatch])
 
     
-    const success = useSelector(selectRegisterSuccess);
-    const isLoading = useSelector(selectRegisterLoading);
-    const error = useSelector(selectRegisterError);
-    const emailValue = useSelector(selectRegisterEmailCheck); 
-    const authorizationValue = useSelector(selectLoginAuthValue);
-    const dispatch = useDispatch();
+
+
   
 /*     React.useEffect(() => {
       dispatch(getUsers());

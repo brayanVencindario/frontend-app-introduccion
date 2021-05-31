@@ -11,7 +11,7 @@ import SelectItem from "../Components/SelectItem";
 import ImgCreation from "../Img/imagen-crear-cuenta.png";
 import {
   selectHomeLoading,
-  selectHomeError,
+  //selectHomeError,
   selectHomeSuccess,
   selectMyProjectInfo
 
@@ -22,24 +22,24 @@ import CheckBox from "../Components/CheckBox";
 
 
 export const ProjectForm = () => {
-
-
+  let { projectId } = useParams();    
+  const success = useSelector(selectHomeSuccess);
+  const isLoading = useSelector(selectHomeLoading);
+  //const error = useSelector(selectHomeError);
+  const dispatch = useDispatch();
+  const infoProject = useSelector(selectMyProjectInfo);
+  
      useEffect(() => {
     
         return () => {
             dispatch(homeResetValues())
 
         }
-    }, [])
+    },[dispatch])
 
 
 
-    let { projectId } = useParams();    
-    const success = useSelector(selectHomeSuccess);
-    const isLoading = useSelector(selectHomeLoading);
-    const error = useSelector(selectHomeError);
-    const dispatch = useDispatch();
-    const infoProject = useSelector(selectMyProjectInfo);
+
   
     React.useEffect(() => {
 
@@ -69,7 +69,7 @@ export const ProjectForm = () => {
   
   
   
-    }, []);
+    },[dispatch, projectId]);
 
   useEffect(() => {
    
@@ -91,7 +91,7 @@ export const ProjectForm = () => {
 
 
 
-  }, [infoProject]);
+  }, [infoProject, projectId]);
 
 
     const [names, setNames] = useState("");

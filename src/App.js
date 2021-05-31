@@ -1,5 +1,4 @@
-import React, { Component,useEffect } from "react";
-import Menu from "./Components/Menu";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import {Login} from "./Pages/Login"
 import {Home} from "./Pages/Home"
@@ -22,7 +21,7 @@ export const App = () => {
 
   useEffect(() => {
     dispatch(tokenVerify())
-}, [])
+}, [dispatch])
 
     return (
       <BrowserRouter>

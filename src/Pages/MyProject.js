@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import Menu from "../Components/Menu";
 import ProjectCard from "../Components/ProjectCard";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +13,7 @@ export const MyProjects = () => {
 
   useEffect(() => {
     dispatch(requestMyProjects());
-  }, []);
+  }, [dispatch]);
 
   const handleOnClear = () => {
     dispatch(myChangeSearch(myProjectsAll));

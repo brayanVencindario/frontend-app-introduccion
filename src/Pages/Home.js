@@ -42,7 +42,7 @@ export const Home = () => {
     
     dispatch(requestProjects());
 
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="login-register-style">

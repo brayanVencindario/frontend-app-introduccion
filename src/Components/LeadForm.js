@@ -1,12 +1,9 @@
 import React,{useState,useEffect} from "react";
-import Links from '../Components/Links'
 import { useSelector, useDispatch } from "react-redux";
-import { FaEyeSlash } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
 import Button from '../Components/Button'
 import TextBox from "../Components/TextBox";
 import ImgLogin from "../Img/vecindario-iniciar-sesion.png";
-import { Redirect } from 'react-router-dom'
+
 import {
     selectHomeSuccess,
     selectHomeLoading,
@@ -33,7 +30,7 @@ export const LeadForm = (props) => {
       
         }
         
-     }, [success])
+     }, [props, success])
 
    useEffect(() => {
     
@@ -41,7 +38,7 @@ export const LeadForm = (props) => {
           dispatch(homeResetValues())
 
       }
-  }, [])
+  }, [dispatch])
 
 
     

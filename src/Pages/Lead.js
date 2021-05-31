@@ -33,14 +33,14 @@ export const Lead = () => {
             dispatch(homeResetValues())
 
         }
-    }, [])
+    }, [dispatch])
 
 
     useEffect(() => {
 
         dispatch(getProjectLeads(leadId));
 
-    }, [])
+    }, [dispatch, leadId])
 
   
  

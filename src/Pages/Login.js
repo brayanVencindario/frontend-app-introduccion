@@ -8,7 +8,7 @@ import TextBox from "../Components/TextBox";
 import ImgLogin from "../Img/vecindario-iniciar-sesion.png";
 import { Redirect } from 'react-router-dom'
 import {
-    selectLoginSuccess,
+    //selectLoginSuccess,
     selectLoginLoading,
     selectLoginError,
     selectLoginAuthValue
@@ -26,9 +26,9 @@ export const Login = () => {
           dispatch(loginReset())
 
       }
-  }, [])
+  })
     
-    const success = useSelector(selectLoginSuccess);
+   // const success = useSelector(selectLoginSuccess);
     const isLoading = useSelector(selectLoginLoading);
     const error = useSelector(selectLoginError);
     const authorizationValue = useSelector(selectLoginAuthValue);

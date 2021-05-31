@@ -1,4 +1,3 @@
-import { createSelector } from "reselect";
 import { CHARGING, ERROR, REGISTERUSER, SUCCESS,EMAILCHECK,RESETVAULES} from "../Types/Register";
 
 const initialState = {
