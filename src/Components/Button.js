@@ -1,0 +1,16 @@
+
+import React, { /* Fragment */ } from "react";
+
+
+export const  Button = (props) => {
+  
+        return (
+
+    <button className={props.className} onClick={props.actionClick}>
+         {props.text}
+    </button>
+
+        ) 
+}
+
+export default Button;

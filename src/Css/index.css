@@ -1,0 +1,250 @@
+
+a{
+    text-decoration: none;
+    color: black !important;
+  }
+  a:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+.login-register-style{
+    display: block;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.text-align-left{
+    text-align:left;
+}
+
+.login-register-style h1{
+width: 35%;
+text-align: center;
+margin: 0 auto;
+margin-top: 10px;
+} 
+
+.login-register-style h2{
+    width: 44%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    } 
+
+.text-buton-register{
+  width: 100%;
+  
+}
+
+.div-buton-register{
+    width: 40%;
+    display: flex;
+    left: 0;
+    position: relative;
+    right: 0;
+    margin: 0 auto;
+}
+
+.lead-input-text{
+    width: 95%;
+    display: flex;
+    left: 0;
+    position: relative;
+    right: 0;
+    margin: 0 auto;
+}
+
+.project-card-price{
+    display: grid;
+    bottom: 0;
+    background: rgba(193,189,189,0.3);
+    margin: 20px 0 10px 0;
+
+}
+
+.ctn-icon-footer span {
+    color: #999;
+    font-size: 15px;
+    max-width: 80px;
+    min-height: 38px;
+    text-align: center;
+}
+
+.icon-project-color{
+    color: #fddc05;
+    margin-bottom: 6px;
+}
+
+
+.project-name{
+    white-space: nowrap;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    font-weight: 700;
+    font-size: 18px;
+}
+.leads-div{
+    display: block;
+    width: 80%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.lead-count-div{
+    background: ghostwhite;
+    width: 27%;
+    margin: 0 auto;
+    padding: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.project-type{
+    color: #999;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.project-location{
+    color: #333;
+    font-size: 13px;
+    min-height: 38px;
+}
+
+.project-location{
+    color: #333;
+    font-size: 13px;
+    min-height: 38px;
+}
+
+.project-location span:first-child {
+    color: #fddc05;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.project-price-text{
+    position: absolute;
+    display: grid;
+    color: white;
+    bottom: 0;
+    left: 10px;
+
+}
+
+.price-from {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+}
+ .fee-from {
+    color: #fddc05;
+}
+
+.create-from-input{
+    display: grid;
+    grid-template-columns: repeat(3, 13vw);
+    justify-content: center; 
+}
+.menu{
+    justify-content: space-around !important;
+    }
+
+    .text-box-search{
+        width: 100%;
+    }
+
+
+    .card-proyect{
+        width: 80%;
+        margin: 0px auto;
+        padding: 10px;
+        z-index: 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+
+@media only screen and (max-width: 600px) {
+    .menu{
+    display: block !important;
+    }
+
+
+    .div-search-menu {
+         width: 100% !important;
+    }
+
+    .login-register-style h1 {
+        width: 100%;
+     
+    }
+    .login-register-style h2 {
+        width: 85%;
+    
+    }
+
+    .div-buton-register {
+        width: 90%;
+     
+    }
+
+    .search-text-box {
+      
+       height: auto !important; 
+    
+    }
+
+    .card-proyect{
+        width: 100%;
+        margin: 0px auto;
+        padding: 10px;
+        z-index: 0;
+        position: relative;
+    }
+
+    .card-proyect{
+        width: 100%;
+        
+    }
+
+    .card-proyect-element {
+      
+        padding: "40px"; 
+        border: "0.5px solid black";
+     
+     }
+
+
+     .dropdown-content {     
+        min-width: 90VW;
+        margin-top: 10px;
+        right: -25vw;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0);
+        z-index: 1;
+        background-color: white;
+        width: 100%;
+    }
+
+
+    .dropdown-menu{
+        width: 100%;
+        left: -4% !important;
+    }
+
+    .create-from-input {
+        grid-template-columns: auto;
+    }
+
+    }
+    
