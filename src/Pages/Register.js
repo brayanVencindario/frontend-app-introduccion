@@ -11,19 +11,20 @@ import ImgCreation from "../Img/imagen-crear-cuenta.png";
 import {
     selectRegisterSuccess,
     selectRegisterLoading,
-    selectRegisterEmailCheck
+    selectRegisterEmailCheck,
+    selectRegisterError
     
   } from "../Reducers/Register";
 
   import { selectLoginAuthValue } from "../Reducers/Login";
-  import { registerUser,checkEmail,registerReset } from "../Actions/Register";
+  import { registerUser,registerReset } from "../Actions/Register";
 
 
 export const Register = () => {
-  
+
   const success = useSelector(selectRegisterSuccess);
   const isLoading = useSelector(selectRegisterLoading);
-  //const error = useSelector(selectRegisterError);
+  const error = useSelector(selectRegisterError);
   const emailValue = useSelector(selectRegisterEmailCheck); 
   const authorizationValue = useSelector(selectLoginAuthValue);
 
@@ -37,9 +38,7 @@ export const Register = () => {
         }
     }, [dispatch])
 
-    
-
-
+  
   
 /*     React.useEffect(() => {
       dispatch(getUsers());
@@ -64,9 +63,10 @@ export const Register = () => {
             phone:phone,
             password: password
         }
+        dispatch(registerUser(data));
 
-        if(!emailValue){
-            dispatch(registerUser(data));
+        if(success){
+           
 
             setNames("")
             setLastNames("")
@@ -78,21 +78,6 @@ export const Register = () => {
        
     }
 
-    const checkEmailInput = (e) =>{
-        e.preventDefault()
-         const data ={                 
-            email: email       
-        }
-
-        if(email){
-            dispatch(checkEmail(data)); 
-        }
-  
-
-
-    
-    }
-    
     
   return (
     <div className="login-register-style">
@@ -129,9 +114,9 @@ export const Register = () => {
         actionText={(e) => setLastNames(e.target.value)}
         PlahceHolder="Apellidos"
         icon={
-          <BsFillPersonFill
+         <BsFillPersonFill
             style={{ position: "absolute", right: "6px", top: "21px" }}
-          />
+          /> 
         }
       />
 
@@ -141,6 +126,7 @@ export const Register = () => {
         type="text"
         required={true}
         value={phone}
+        minlength="10"
         actionText={(e) => setPhone(e.target.value)}
         PlahceHolder="Teléfono móvil"
         icon={
@@ -158,7 +144,6 @@ export const Register = () => {
         value={email}
         actionText={(e) => setEmail(e.target.value)}
         PlahceHolder="Correo electrónico"
-        blur={(e)=>checkEmailInput(e)}
         icon={
           <AiOutlineMail
             style={{ position: "absolute", right: "6px", top: "21px" }}
@@ -172,6 +157,7 @@ export const Register = () => {
         ButtonclassName="search-text-box"
         type={passwordShow?"text":"password"}
         required={true}
+        minlength="8"
         value={password}
         actionText={(e) => setPassword(e.target.value)}
         PlahceHolder="Contraseña"
@@ -195,6 +181,9 @@ export const Register = () => {
           text='login'
           toLink="/Users/Login"/>
       </div> :""}
+      {error?  <div> Error al registrar
+      </div> :""}
+      
 
 
 

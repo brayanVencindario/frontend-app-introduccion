@@ -11,6 +11,7 @@ export const  TextBox = (props) => {
       placeholder={props.PlahceHolder}
       required={props.required}
       value={props.value}
+      minlength={props.minlength}
       onChange={props.actionText}
       onBlur={props.blur} />       
        {props.icon}

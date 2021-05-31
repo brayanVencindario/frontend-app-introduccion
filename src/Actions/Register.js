@@ -53,7 +53,7 @@ function registerUser(data) {
         'Content-Type': 'application/json'
       }
     }).then(res => res.json())
-    .catch(error =>  dispatch(registerError(error)))
+    .catch(error =>  dispatch(registerError(true)))
     .then(response => {
       if(response.status==="ok"){
 
@@ -62,7 +62,7 @@ function registerUser(data) {
         window.localStorage.setItem('user_email',response.user_email)
         dispatch(loginAuth(true))
       }else{
-        dispatch(registerError(response.error))
+        dispatch(registerError(true))
       }
     })
     

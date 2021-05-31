@@ -115,6 +115,7 @@ export const LeadForm = (props) => {
         ButtonclassName="search-text-box"
         type={"text"}
         required={true}
+        minlength="10"
         value={phone}
         actionText={(e) => setPhone(e.target.value)}
         PlahceHolder="Telefono"

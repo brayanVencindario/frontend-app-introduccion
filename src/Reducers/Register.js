@@ -16,7 +16,7 @@ function registerReducer(state = initialState, action) {
           return { ...state, loading: true };
     
           case REGISTERUSER:
-            return { ...state, error: action.payload, loading: false, success: "" }; 
+            return { ...state, loading: false,}; 
     
         case ERROR:
           return { ...state, error: action.payload, loading: false, success: "" };

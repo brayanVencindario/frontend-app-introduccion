@@ -114,12 +114,12 @@ import {
           'Authorization': `Bearer ${window.localStorage.getItem("token")}`
         }
       }).then(res => res.json())
-      .catch(error =>  dispatch(homeError(error)))
+      .catch(error =>  dispatch(homeError(true)))
       .then(response => {
         if(response.status==="ok"){
           dispatch(homeSuccess(true))
         }else{
-          dispatch(homeError(response.error))
+          dispatch(homeError(true))
         }
       })
       

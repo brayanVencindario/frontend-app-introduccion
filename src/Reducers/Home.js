@@ -7,7 +7,7 @@ const initialState = {
   myProjects:[],
   ProjectInfo:[],
   Leads:[],
-  error: "",
+  error:false,
   success:false,
   loading:false
 
@@ -25,7 +25,7 @@ function loginReducer(state = initialState, action) {
           return { ...state, error: action.payload, loading: false, success:false };
 
           case SUCCESS:
-            return { ...state, error: action.payload, loading: false, success: true};
+            return { ...state, error: false, loading: false, success: action.payload};
 
           case GETPROJECTS:
             return { ...state, projects: action.payload,loading: false };
