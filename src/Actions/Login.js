@@ -37,7 +37,7 @@ function loginUser(data) {
         'Content-Type': 'application/json'
       }
     }).then(res => res.json())
-    .catch(error =>  dispatch(loginError(error)))
+    .catch(error =>  dispatch(loginError(true)))
     .then(response => {
       if(response.status==="ok"){
 
@@ -46,7 +46,8 @@ function loginUser(data) {
         window.localStorage.setItem('user_email',response.user_email)
         dispatch(loginAuth(true))
       }else{
-        dispatch(loginError(response.error))
+        console.log('error')
+        dispatch(loginError(true))
       }
     })
     

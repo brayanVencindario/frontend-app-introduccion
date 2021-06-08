@@ -19,21 +19,22 @@ import {
 
 export const Login = () => {
 
+  const isLoading = useSelector(selectLoginLoading);
+  const error = useSelector(selectLoginError);
+  const authorizationValue = useSelector(selectLoginAuthValue);
+  const dispatch = useDispatch();
 
+  
    useEffect(() => {
     
       return () => {
           dispatch(loginReset())
 
       }
-  })
+  },[dispatch])
     
    // const success = useSelector(selectLoginSuccess);
-    const isLoading = useSelector(selectLoginLoading);
-    const error = useSelector(selectLoginError);
-    const authorizationValue = useSelector(selectLoginAuthValue);
-    const dispatch = useDispatch();
-  
+
 /*     React.useEffect(() => {
       dispatch(getUsers());
     }, [dispatch]); */

@@ -3,7 +3,7 @@ import { CHARGING, ERROR, SUCCESS,RESETVAULES,AUTHVALUE} from "../Types/Login";
 
 const initialState = {
   loading: false,
-  error: "",
+  error: false,
   success:false,
   authValue:false
 };
@@ -17,16 +17,16 @@ function loginReducer(state = initialState, action) {
           return { ...state, loading: true };
     
         case ERROR:
-          return { ...state, error: action.payload, loading: false, success: "" };
+          return { ...state, error: action.payload, loading: false, success: false };
     
         case SUCCESS:
-          return { ...state, success: action.payload, loading: false, error: "" };
+          return { ...state, success: action.payload, loading: false, error: false };
 
           case RESETVAULES:
-            return { ...state, loading: false,success:false,  error: "", };
+            return { ...state, loading: false,success:false,  error: false, };
 
             case AUTHVALUE:
-              return { ...state, loading: false,authValue:action.payload,success:false,  error: "", };
+              return { ...state, loading: false,authValue:action.payload,success:false,  error: false, };
             
         default:
           return state;
